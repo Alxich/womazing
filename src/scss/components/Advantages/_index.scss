@@ -1,0 +1,30 @@
+#advantages {
+    padding: 65px 0;
+
+    &.button-contains .button {
+        margin-top: 65px;
+    }
+
+
+    @import './items';
+}
+
+@media (max-width: 1140px) {
+    #advantages {
+        padding: 65px 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    #advantages {
+        &.button-contains .button {
+            margin-top: 45px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #advantages {
+        padding: 35px 15px;
+    }
+}

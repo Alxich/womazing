@@ -1,0 +1,130 @@
+#title-bread {
+    margin: 110px 0 $titleBread-gap 0;
+
+    &.product {
+        margin-top: 30px;
+    }
+
+    .title {
+        margin-bottom: $titleBread-title-gap;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+
+        span {
+            font-size: $text;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 0.02em;
+            transition: all $duration-fast ease;
+            cursor: pointer;
+
+            &:hover {
+                color: $brand;
+            }
+
+            &.current {
+                color: $breadcrumbs-noactive;
+                cursor: default;
+            }
+
+            &.separator {
+                position: relative;
+                background-color: $black;
+                display: inline-block;
+                height: 1px;
+                width: 13.5px;
+                margin: 0 13px;
+                cursor: default;
+            }
+
+            &:last-child.separator {
+                display: none;
+            }
+        }
+
+        a {
+            &:last-child, &.current, &:nth-last-child(2) {
+                span {
+                    color: $breadcrumbs-noactive;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    #title-bread {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    $text: 1rem;
+
+    #title-bread {
+        margin: 0 0 $titleBread-gap 0;
+
+        &.product {
+            margin-top: 0;
+        }
+
+        .breadcrumbs {
+            span {
+                font-size: $text;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #title-bread {
+        margin-bottom: 65px;
+    }
+}
+
+@media (max-width: 600px) {
+    #title-bread {
+        .title {
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumbs {
+            span {
+                &.separator {
+                    margin: 0 6px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    $text: 0.9rem;
+
+    #title-bread {
+        .breadcrumbs {
+            span {
+                font-size: $text;
+            }
+        }
+    }   
+}
+
+@media (max-width: 365px) {
+    $text: 0.85rem;
+    
+    #title-bread {
+        .breadcrumbs {
+            span {
+                font-size: $text;
+            }
+        }
+    }   
+}

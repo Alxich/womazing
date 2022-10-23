@@ -1,0 +1,276 @@
+.colophon {
+    background-color: $footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 363px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $white;
+    padding: 101px 0;
+
+    .container {
+        &.centered {
+            align-items: baseline;
+        }
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    .col {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brands-container {
+        .logo {
+            height: 25px;
+            width: 140px;
+            margin-bottom: 70px;
+            cursor: pointer;
+        }
+
+        .privacy {
+            font-size: 0.8125rem;
+
+            li > a {
+                transition: all $duration ease;
+                cursor: pointer;
+
+                &:hover {
+                    color: $brand;
+                }
+            }
+        }
+    }
+
+    .navigation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: flex-start;
+
+            li {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                letter-spacing: 0.02em;
+                transition: all $duration ease;
+                cursor: pointer;
+                margin: 0 22.5px;
+
+                span {
+                    opacity: 1;
+                    transition: all $duration ease;
+                }
+
+                a {
+                    z-index: 1;
+                }
+
+                a:before {
+                    display: block;
+                    content: attr(title);
+                    height: 0;
+                    font-weight: 700;
+                    letter-spacing: 0.02em;   
+                    color: $brand; 
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all $duration ease;
+                }
+    
+                &.active > a, &:hover > a {
+                    span {
+                        font-weight: 700;
+                        color: $brand;
+                    }
+
+                    &:before {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    top: 0;
+                    left: 0;
+                    padding-top: 40px;
+
+                    li {
+                        font-size: 0.8125rem;
+                        margin: 5px 0;
+
+                        &.active a, &:hover a {
+                            font-weight: 700;
+                            color: $brand;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contacts-container {
+        align-items: flex-end;
+
+        .contacts {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 30px;
+
+            li {
+                transition: all $duration ease;
+                cursor: pointer;
+
+                &:hover {
+                    color: $brand;
+                }
+            }
+        }
+
+        .socials {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 30px;
+
+            li {
+                display: flex;
+                height: 22px;
+                width: 22px;
+                margin: 0 6px;
+                cursor: pointer;
+
+                img {
+                    position: relative;
+                    top: 0;
+                    transition: all $duration ease;
+                    
+                    &:hover {
+                        top: -4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .colophon {
+        padding: 101px 15px;
+
+        .navigation-container ul li {
+            margin: 0 10.5px;
+        }
+    }
+}
+
+@media (max-width: 750px) { 
+    .colophon {
+        padding: 70px 15px;
+
+        & > .container.centered {
+            justify-content: center;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .col {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 0 0 15px 0;
+            }
+
+            .contacts {
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .socials  {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+
+            .navigation-container ul {
+                .sub-menu {
+                    position: relative;
+                    align-items: center;
+                    padding-top: 15px;
+                }
+            }
+
+            .brands-container {
+                justify-content: space-evenly;
+                flex-direction: row;
+
+                .logo {
+                    margin: 0 15px 0 0;
+                }
+
+                .privacy li {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .colophon {
+        padding: 35px 15px 15px 15px;
+
+        .container.centered {
+            .navigation-container ul {
+                flex-direction: column;
+                align-items: center;
+
+                li > a {
+                    padding: 10px 0;
+                }
+
+                .sub-menu {
+                    padding-top: 0;
+
+                    li > a {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .colophon {
+        .container.centered .brands-container {
+            justify-content: center;
+            flex-direction: column;
+
+            .logo {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+}

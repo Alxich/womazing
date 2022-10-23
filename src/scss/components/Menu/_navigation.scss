@@ -1,0 +1,112 @@
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 45px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        li {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid $white;
+            width: 100%;
+            letter-spacing: 0.02em;
+            color: $white;
+            transition: all $duration ease;
+            cursor: pointer;
+            padding: 20px 0;
+
+            span {
+                opacity: 1;
+                transition: all $duration ease;
+            }
+
+            a:before {
+                display: block;
+                content: attr(title);
+                height: 0;
+                font-weight: 700;
+                letter-spacing: 0.02em;   
+                color: $brand; 
+                visibility: hidden;
+                opacity: 0;
+                transition: all $duration ease;
+            }
+
+            &.active > a, &:hover > a {
+                span {
+                    font-weight: 700;
+                    color: $brand;
+                }
+
+                &:before {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            &.has-menu {
+                border-bottom-color: transparent;
+                padding-bottom: 0;
+
+                &:hover {
+                    border-bottom-color: $white
+                }
+
+                & > a {
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px solid $white;
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+            }
+
+            ul {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
+                max-height: 0;
+                transition: all $duration ease;
+                overflow: hidden;
+
+                li {
+                    font-size: 0.8125rem;
+                    width: calc(100% - 45px);
+                    margin: 0 auto;
+
+                    &:first-child {
+                        border-top-color: transparent;
+                        
+                    }
+
+                    &:last-child {
+                        border-bottom-color: transparent;
+                        padding-bottom: 20px;
+                    }
+
+                    &.active a, &:hover a {
+                        font-weight: 700;
+                        color: $brand;
+                    }
+                }
+            }
+
+            &:hover > ul {
+                max-height: 999px;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+#collection {
+    padding: 65px 0;
+
+    &.button-contains .button {
+        margin-top: 65px;
+    }
+
+    @import './card';
+
+    &.has-amount {
+        .card:last-child {
+            display: none;
+        }   
+    }
+}
+
+@media (max-width: 1140px) {
+    #collection {
+        padding: 65px 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    #collection {
+        &.button-contains .button {
+            margin-top: 45px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #collection {
+        padding: 35px 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    #collection {
+        &.has-amount {
+            .card:last-child {
+                display: block;
+            }   
+        }
+    }
+}

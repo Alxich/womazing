@@ -1,0 +1,142 @@
+/*
+* Notice that all variables start changing in each file of styles that belongs to.
+* There is only a dekstop variables styles
+*/
+
+$black: #000000;
+$white: #ffffff;
+$brand-bg: #F1EADC;
+$brand-accent: #998E78;
+$no-relative: #9C9C9C;
+$brand: #6E9C9F;
+$brand-hover: #509498;
+$border: #CEDEDF;
+$orange: #fe5f1e;
+$outcolor: #F1F5F5;
+$counter: #808080;
+$counter-border: #AFAFAF;
+$brand-trans:  rgba(110, 156, 159, 0.77);
+$error-color: #ffc5c5;
+
+$footer: #100F0F;
+
+$container-width: 1110px;
+
+$page-width: 1600px;
+
+$header-height: 95px;
+
+// Form
+
+$form-default-color: #F1EADC;
+$form-error-color: #ffc5c5;
+$form-input-height: 40px;
+$form-textfield-height: 134px;
+$form-width: 443px;
+$form-checkbox-size: 24px;
+$form-checkbox-gap: 14px;
+$form-title-gap: 47px;
+$form-item-gap: 81px;
+
+// Button default
+
+$button-height: 67px;
+$button-width: 243px;
+$button-cta-height: 67px;
+$button-cta-width: 268px;
+$button-banner-height: 67px;
+$button-banner-width: 310px;
+$button-send-height: 67px;
+$button-send-width: 189px;
+$button-checkout-height: 67px;
+$button-checkout-width: 246px;
+
+// Icon import
+
+$icon-import-height: 61px;
+$icon-import-width: 61px;
+
+// Slider
+
+$slider-width: 1370px;
+$dot-noactive: #D1D1D1;
+$dot-noactive-hover: #BEBEBE;
+$dot-active: #000000;
+$dot-active-hover: #5F5F5F;
+$dot-trans-noactive: rgba(255, 255, 255, 0.36);
+$dot-trans-noactive-hover: rgba(255, 255, 255, 0.75);
+$dot-trans-active: #ffffff;
+$dot-trans-active-hover: rgba(255, 255, 255, 0.8);
+
+$arrow-black: #858585;
+
+// Animation speed
+
+$duration: 0.55s;
+$duration-fast: 0.25s;
+$duration-long: 2s;
+
+// Sizes text
+
+$title-h1: 3.438rem;
+$title-h2: 2.5rem;
+$title-h3: 1.563rem;
+$title-h4: 1.25rem;
+$big-text: 1.25rem;
+$text: 1.063rem;
+$card-price: 0.938rem;
+$small-text: 0.85rem;
+
+$section-title-gap: 92px;
+
+// Breadcrumbs
+
+$breadcrumbs-noactive: #909090;
+$titleBread-title-gap: 26px;
+$titleBread-gap: 102px;
+
+// Product page
+
+$product-price: 2.5rem;
+$product-price-sale: 1.875rem;
+$info-width: 355px;
+$product-items-height: 42px;
+$product-items-width: 42px;
+
+// Callback pop-up
+
+$callback-bg: rgba(110, 156, 159, 0.95);
+$callback-width: 491px;
+$callback-gap: 70px;
+$callback-item-gap: 35px;
+
+// Contacts
+
+$map-placeholder: #DDDDDD;
+$map-height: 476px;
+
+// Order
+
+$order-status-icon-height: 84px;
+$order-status-icon-width: 72px;
+
+// Checkout
+
+$checkout-width: 918px;
+$checkout-form-width: 350px;
+$checkout-info-width: 285px;
+$checkout-table-gap: 15px;
+
+// Cart 
+
+$labels-border: #CCCCCC;
+$cart-item-hover: rgba(210, 210, 210, 0.10);
+$cart-item-height: 180px;
+$cart-item-inside-gap: 15px 0 15px 10px;
+$cart-thumb-height: 180px;
+$cart-thumb-width: 125px;
+
+// sidebar 
+
+$sidebar: #191A19;
+$sidebar-width: 400px;

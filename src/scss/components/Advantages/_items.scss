@@ -1,0 +1,46 @@
+.item {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 15%;
+
+    .thumbnail {
+        height: $icon-import-height;
+        width: $icon-import-width;
+        margin-bottom: 37px;
+    }
+
+    &:hover .thumbnail {
+        animation: wobble-ver-left 0.8s both;
+    }
+
+    .title {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    .item {
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    $icon-import-height: 41px;
+    $icon-import-width: 41px;
+
+    .item {
+        padding-right: 0;
+
+        .title {
+            margin-bottom: 15px;
+        }
+        
+        .thumbnail {
+            height: $icon-import-height;
+            width: $icon-import-width;
+            margin-bottom: 15px;
+        }
+    }
+}

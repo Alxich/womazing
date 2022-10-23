@@ -1,0 +1,55 @@
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 0 70px 0;
+
+    .coupon {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 520px;
+        width: 100%;
+
+        button {
+            max-width: $button-cta-width;
+            width: 100%;
+        }
+
+        input {
+            margin: 0 16px 0 0;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .cart-actions {
+        padding: 35px 0 35px 0;
+
+        .coupon {
+            max-width: 415px;
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .cart-actions {
+        flex-direction: column;
+
+        .coupon {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 0 15px 0;
+            
+            input {
+                margin: 0 0 15px 0;
+            }
+
+            button {
+                max-width: 185px;
+            }
+        }
+    }
+}

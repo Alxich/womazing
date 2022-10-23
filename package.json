@@ -12,11 +12,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "server-init": "json-server --watch public/db.json --port 3001",
+    "start-init": "react-scripts start",
+    "start": "concurrently --kill-others \"npm run server-init\" \"npm run start-init\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -34,5 +37,27 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "axios": "^1.1.2",
+    "classnames": "^2.3.2",
+    "concurrently": "^7.4.0",
+    "json-server": "^0.17.0",
+    "react-hot-toast": "^2.4.0",
+    "react-pagination": "^1.0.0",
+    "react-redux": "^8.0.4",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^6.4.2",
+    "react-slick": "^0.29.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "sass": "^1.54.9",
+    "slick-carousel": "^1.8.1",
+    "use-react-router-breadcrumbs": "^4.0.1",
+    "uuid": "^9.0.0",
+    "validator": "^13.7.0"
   }
 }

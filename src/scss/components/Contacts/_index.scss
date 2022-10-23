@@ -1,0 +1,17 @@
+#contacts {
+    #title-bread {
+        margin-bottom: 65px;
+    }
+
+    @import "./map";
+    @import "./items";
+    @import "./form";
+}
+
+@media (max-width: 770px) {
+    #contacts {
+        #title-bread {
+            margin-bottom: 35px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+#slider-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: $slider-width;
+    margin-left: auto;
+    padding-bottom: 65px;
+    overflow: hidden;
+
+
+    .slide-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .slick-dots {
+        bottom: 8.2%;
+        left: 20%;
+    }
+
+    @import "./slide";
+}
+
+@media (max-width: 850px) {
+    #slider-banner {
+        .slick-dots {
+            bottom: -5%;
+            left: calc(50% - 60px);
+        }
+    }
+}

@@ -1,0 +1,182 @@
+.title {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    color: $black;
+
+    &.section {
+        margin-bottom: $section-title-gap;
+    }
+
+    &.center {
+        text-align: center;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    &.section-left {
+        margin: 0 auto $section-title-gap 0;
+    }
+
+    &.section-right {
+        margin: 0 0 $section-title-gap auto;
+    }
+
+    h1 {
+        font-size: $title-h1;
+    }
+
+    h2 {
+        font-size: $title-h2;
+    }
+
+    h3 {
+        font-size: $title-h3;
+    }
+
+    h4 {
+        font-size: $title-h4;
+    }
+
+    p {
+        font-size: $text;
+    }
+}
+
+@media (max-width: 1300px) {
+    $title-h1: 3.238rem;
+    $title-h2: 2.25rem;
+    $title-h3: 1.463rem;
+    $title-h4: 1.25rem;
+
+    .title {
+        h1 {
+            font-size: $title-h1;
+        }
+    
+        h2 {
+            font-size: $title-h2;
+        }
+    
+        h3 {
+            font-size: $title-h3;
+        }
+    
+        h4 {
+            font-size: $title-h4;
+        }
+    
+        p {
+            font-size: $text;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    $title-h1: 2.75rem;
+    $title-h2: 2.15rem;
+    $title-h3: 1.35rem;
+    $title-h4: 1.25rem;
+
+    $text: 1rem;
+
+    $section-title-gap: 45px;
+
+    .title {
+        &.section {
+            margin-bottom: $section-title-gap;
+        }
+    
+        &.section-left {
+            margin: 0 auto $section-title-gap 0;
+        }
+    
+        &.section-right {
+            margin: 0 0 $section-title-gap auto;
+        }
+
+        h1 {
+            font-size: $title-h1;
+        }
+    
+        h2 {
+            font-size: $title-h2;
+        }
+    
+        h3 {
+            font-size: $title-h3;
+        }
+    
+        h4 {
+            font-size: $title-h4;
+        }
+    
+        p {
+            font-size: $text;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    $title-h1: 2.25rem;
+    $title-h2: 1.85rem;
+    $title-h3: 1.3rem;
+    $title-h4: 1.2rem;
+
+    $text: 0.9rem;
+
+    .title {
+        h1 {
+            font-size: $title-h1;
+        }
+    
+        h2 {
+            font-size: $title-h2;
+        }
+    
+        h3 {
+            font-size: $title-h3;
+        }
+    
+        h4 {
+            font-size: $title-h4;
+        }
+    
+        p {
+            font-size: $text;
+        }
+    }
+}
+
+@media (max-width: 365px) {
+    $title-h1: 1.8rem;
+    $title-h2: 1.55rem;
+    $title-h3: 1.25rem;
+    $title-h4: 1.125rem;
+
+    $text: 0.85rem;
+
+    .title {
+        h1 {
+            font-size: $title-h1;
+        }
+    
+        h2 {
+            font-size: $title-h2;
+        }
+    
+        h3 {
+            font-size: $title-h3;
+        }
+    
+        h4 {
+            font-size: $title-h4;
+        }
+    
+        p {
+            font-size: $text;
+        }
+    }
+}

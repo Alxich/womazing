@@ -1,0 +1,188 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .title {
+        margin-bottom: $form-title-gap;
+    }
+
+    .form-inputs {
+        .item:not(:last-child) {
+            margin-bottom: $form-item-gap;
+        }
+    }
+
+    input:not([type="checkbox"]), textarea {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid $black;
+        width: 100%;
+        font-size: $text;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        text-align: left;
+        transition: all $duration ease;
+        margin: 0 0 $callback-item-gap 0;
+        padding: 0;
+
+        &:hover {
+            border-bottom-color: $brand-hover;
+        }
+
+        &.invalid {
+            border-bottom-color: $form-error-color;
+            
+            &::placeholder {
+                color: $form-error-color;
+            }
+        }
+    }
+
+    label {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        font-size: $text;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+    }
+
+    input[type="checkbox"] {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $black;
+        height: $form-checkbox-size;
+        width: $form-checkbox-size;
+        transition: all $duration ease;
+        margin: 0 $form-checkbox-gap 0 0;
+        padding: 0;
+        cursor: pointer;
+
+        &::before {
+            position: relative;
+            content: "";
+            background-color: $black;
+            display: block;
+            height: calc(100% - 10px);
+            width: calc(100% - 10px);
+            animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            transition: all $duration-fast ease;
+            opacity: 0;
+        }
+
+        &:checked::before {
+            animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            opacity: 1;
+        }
+
+        &.invalid {
+            border-color: $form-error-color;
+
+            &::before {
+                background-color: $form-error-color
+            }
+        }
+    }
+
+    input {
+        height: $form-input-height;
+    }
+
+    textarea {
+        height: $form-textfield-height;
+        resize: vertical;
+    }
+
+    .form-message {
+        position: relative;
+        background-color: $form-default-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 30px 15px;
+        margin-top: 62px;
+
+        &.success {
+            background-color: $form-default-color;
+        }
+
+        &.error {
+            background-color: $form-error-color;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    $text: 1rem;
+
+    form {
+        input:not([type="checkbox"]), textarea {
+            font-size: $text;
+        }
+
+        label {
+            font-size: $text;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    form {
+        .title {
+            margin-bottom: 35px;
+        }
+
+        input:not([type="checkbox"]), textarea {
+            margin-bottom: 15px;
+        }
+
+        .form-message {
+            margin-top: 35px;
+        }
+
+        .form-inputs {
+            .item:not(:last-child) {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    $text: 0.9rem;
+
+    form {
+        input:not([type="checkbox"]), textarea {
+            font-size: $text;
+        }
+
+        label {
+            font-size: $text;
+        }
+    }
+}
+
+@media (max-width: 365px) {
+    $text: 0.85rem;
+
+    form {
+        input:not([type="checkbox"]), textarea {
+            font-size: $text;
+        }
+
+        label {
+            font-size: $text;
+        }
+    }
+}

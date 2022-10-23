@@ -1,0 +1,211 @@
+.button {
+    background-color: $white;
+    display: block;
+    border: none;
+    outline: none;
+    height: $button-height;
+    width: $button-width;
+    font-size: $text;
+    font-weight: 400;
+    text-align: center;
+    color: $white;
+    transition: all $duration ease;
+    cursor: pointer;
+
+    &.disabled {
+        opacity: 0.75;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &.button-usual {
+        background-color: $brand;
+        border: 1px solid $brand;
+
+        &:hover {
+            border-color: $brand-hover;
+            background-color: $brand-hover;
+        }
+    }
+
+    &.button-side-effect {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        height: $button-banner-height;
+        width: $button-banner-width;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .side-outcolor {
+            background-color: $outcolor;
+            transition: all $duration ease;
+            width: 21.645%;
+
+            path {
+                transition: all $duration ease;
+            }
+        }
+
+        &:hover .side-outcolor {
+            background-color: $brand;
+
+            path {
+                stroke: $white;
+            }
+        }
+
+        .side {
+            background-color: $brand;
+            border: 1px solid $brand;
+            width: 78.355%;
+            transition: all $duration ease;
+        }
+
+        &:hover .side {
+            background-color: transparent;
+            color: $brand;
+        }
+    }
+    
+    &.button-outline {
+        background-color: $white;
+        border: 1px solid $brand;
+        color: $brand;
+
+        &:hover {
+            background-color: $brand;
+            color: $white;
+        }
+    }
+
+    &.button-cta {
+        height: $button-cta-height;
+        width: $button-cta-width;
+    }
+
+    &.button-checkout {
+        height: $button-checkout-height;
+        width: $button-checkout-width;
+    }
+
+    &.button-send {
+        height: $button-send-height;
+        width: $button-send-width;
+    }
+
+    &.centered {
+        margin: 0 auto;
+    }
+
+    &.full-width {
+        width: 100%;
+    }
+
+    &.link {
+        position: relative;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        color: $brand;
+        margin-top: 28px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $border;
+            display: block;
+            right: auto;
+            bottom: -5px;
+            left: 0;
+            height: 1px;
+            width: 0;
+            transition: all $duration ease;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+
+    &.invalid {
+        background-color: $error-color;
+        border-color: $error-color;
+        color: $white;
+
+        &:hover {
+            background-color: transparent;
+            border-color: $error-color;
+            color: $error-color;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    $text: 1rem;
+
+    $button-height: 55px;
+    $button-width: 185px;
+    $button-cta-height: 55px;
+    $button-cta-width: 185px;
+    $button-banner-height: 55px;
+    $button-banner-width: 250px;
+    $button-send-height: 55px;
+    $button-send-width: 185px;
+    $button-checkout-height: 55px;
+    $button-checkout-width: 185px;
+
+    .button {
+        height: $button-height;
+        width: $button-width;
+        font-size: $text;
+
+        &.button-side-effect {
+            height: $button-banner-height;
+            width: $button-banner-width;
+        }
+    
+        &.button-cta {
+            height: $button-cta-height;
+            width: $button-cta-width;
+        }
+
+        &.button-checkout {
+            height: $button-checkout-height;
+            width: $button-checkout-width;
+        }
+
+        &.button-send {
+            height: $button-send-height;
+            width: $button-send-width;
+        }
+
+        &.link {
+            height: auto;
+            width: auto;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    $text: 0.9rem;
+
+    .button {
+        font-size: $text;
+    }
+}
+
+@media (max-width: 365px) {
+    $text: 0.85rem;
+    
+    .button {
+        font-size: $text;
+    }
+}

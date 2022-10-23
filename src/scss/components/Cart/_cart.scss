@@ -1,0 +1,44 @@
+#cart {
+    &.empty {
+        height: 40vh;
+        padding: 0 15px;
+
+        p {
+            margin: 25px 0 45px 0;
+        }  
+    }
+
+    .cart-content {
+        padding-top: 86px;
+
+        & > div {
+            width: 100%;
+        }
+
+        @import './labels';
+    }
+
+    @import './cartItems';
+    @import './cartActions';
+    @import './cartTotal';
+
+    .price {
+        color: $black;
+    }
+}
+
+@media (max-width: 1140px) {
+    #cart {
+        .cart-content {
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #cart {
+        .cart-content .labels {
+            display: none;
+        }
+    } 
+}

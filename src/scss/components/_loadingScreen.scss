@@ -1,0 +1,30 @@
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    svg {
+        opacity: 0;
+        transition: all $duration-fast ease;
+
+        &.active {
+            opacity: 1;
+            
+            .loading-1 {
+                -webkit-animation: animate-svg-fill-1 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.8s both;
+                animation: animate-svg-fill-1 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.8s both;
+            }
+            
+            .loading-2 {
+                -webkit-animation: animate-svg-fill-2 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.3s both;
+                animation: animate-svg-fill-2 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.3s both;
+            }
+
+            .loading-3 {
+                -webkit-animation: animate-svg-fill-3 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.8s both;
+                animation: animate-svg-fill-3 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.8s both;
+            }
+        }
+    }
+}  
+  

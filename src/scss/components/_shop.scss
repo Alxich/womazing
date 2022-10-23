@@ -1,0 +1,115 @@
+#shop {
+    padding-bottom: 65px;
+
+    #title-bread {
+        margin-bottom: 215px;
+    }
+
+    .counter {
+        color: $counter;
+        margin-right: auto;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding-top: 65px;
+
+        .item {
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $black;
+            height: 41px;
+            width: 41px;
+            font-size: $text;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            line-height: 1.4;
+            color: $black;
+            transition: all $duration ease;
+            cursor: pointer;
+            margin: 0 7px;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+
+            &.active {
+                background-color: $black;
+                color: $white;
+                cursor: default;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    #shop {
+         .counter {
+            padding: 0 15px;
+        }
+
+        .navigation {
+            padding: 65px 15px 0 15px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    $text: 1rem;
+
+    #shop {
+        #title-bread {
+            margin: 0 0 $titleBread-gap 0;
+        }
+        
+        .navigation {
+            .item {
+                font-size: $text;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #shop {
+        #title-bread {
+            margin: 0 0 60px 0;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    $text: 0.9rem;
+
+    #shop {
+        .navigation {
+            .item {
+                font-size: $text;
+            }
+        }
+    }   
+}
+
+@media (max-width: 365px) {
+    $text: 0.85rem;
+    
+    #shop {
+        .navigation {
+            .item {
+                font-size: $text;
+            }
+        }
+    }   
+}

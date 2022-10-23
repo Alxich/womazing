@@ -1,0 +1,37 @@
+@import './fonts';
+@import './variables';
+@import './libs/normalize';
+
+@import './components/index';
+
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.App > .container {
+    position: relative;
+    background-color: $white;
+    transition: transform .7s ease-in-out;
+    z-index: 2;
+}
+
+.wrapper {
+    min-height: 70vh;    
+    max-width: $page-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 160px 0 65px 0;
+
+    &.home {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 110px 0 65px 0;
+    }
+}

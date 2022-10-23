@@ -1,0 +1,107 @@
+.information {
+    & > div:not(:last-child) {
+        margin-bottom: 59px;
+    }
+
+    &.text-contains {
+        & > div:not(:last-child) {
+            margin-bottom: 35px;
+        }   
+    }
+
+    .text-block {
+        max-width: $info-width;
+    }
+
+    .price {
+        font-size: unset;
+        color: $no-relative;
+
+        p {
+            font-size: $product-price-sale;
+
+            &.old {
+                font-size: $product-price;
+            }
+        }
+    }
+
+    .add-to-cart {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: stretch;
+
+        .counter {
+            position: relative;
+            display: inline;
+            width: 68px;
+            margin-right: 11px;
+
+            .changer {
+                position: absolute;
+                top: calc(50% - 7px);
+                height: 15px;
+                width: 15px;
+
+                &.up {
+                    left: 5px;
+                }
+    
+                &.down {
+                    right: 5px;
+                }
+            }
+
+            input {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $counter-border;
+                height: 100%;
+                width: 100%;
+                font-size: $big-text;
+                font-weight: 500;
+                line-height: 1.4;
+                letter-spacing: 0.02em;
+                text-align: center;
+                color: $black;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    $product-price: 2rem;
+    $product-price-sale: 1.375rem;
+
+    .information {
+        & > div:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    
+        &.text-contains {
+            & > div:not(:last-child) {
+                margin-bottom: 25px;
+            }   
+        }
+
+        .price {
+            p {
+                font-size: $product-price-sale;
+
+                &.old {
+                    font-size: $product-price;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) { 
+    $info-width: 100%;
+
+    .information .text-block {
+        max-width: $info-width;
+    }
+}

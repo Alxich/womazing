@@ -1,0 +1,110 @@
+.text-block {
+    font-size: $text;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+    &.big-text {
+        font-size: $big-text;
+        font-weight: 400;
+    }
+
+    &.small-text {
+        font-size: $small-text;
+    }
+
+    &.to-right {
+        text-align: right;
+    }
+
+    &.centered {
+        text-align: center;
+    }
+
+    p:not(:last-child) {
+        margin: 19px 0;
+    }
+
+    strong, b {
+        font-weight: 700;
+    }
+
+    a {
+        position: relative;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        color: $brand;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $border;
+            display: block;
+            right: auto;
+            bottom: -5px;
+            left: 0;
+            height: 1px;
+            width: 0;
+            transition: all $duration ease;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    $big-text: 1.125rem;
+    $text: 1rem;
+    $small-text: 0.85rem;
+
+    .text-block {
+        font-size: $text;
+    
+        &.big-text {
+            font-size: $big-text;
+        }
+    
+        &.small-text {
+            font-size: $small-text;
+        }
+    }    
+}
+
+@media (max-width: 500px) {
+    $big-text: 1.05rem;
+    $text: 0.9rem;
+    $small-text: 0.8rem;
+
+    .text-block {
+        font-size: $text;
+    
+        &.big-text {
+            font-size: $big-text;
+        }
+    
+        &.small-text {
+            font-size: $small-text;
+        }
+    }    
+}
+
+@media (max-width: 365px) {
+    $big-text: 1rem;
+    $text: 0.85rem;
+    $small-text: 0.725rem;
+
+    .text-block {
+        font-size: $text;
+    
+        &.big-text {
+            font-size: $big-text;
+        }
+    
+        &.small-text {
+            font-size: $small-text;
+        }
+    }    
+} 

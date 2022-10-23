@@ -1,0 +1,23 @@
+.gallery {
+    position: relative;
+    margin-bottom: auto;
+
+    .container {
+        display: block;
+    }
+
+    .slick-dots {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        opacity: 0;
+        bottom: 10%;
+        transition: all $duration-fast ease;
+    }
+
+    &:hover .slick-dots {
+        opacity: 1;
+    }
+} 

@@ -1,0 +1,127 @@
+#checkout {
+    #title-bread {
+        margin-bottom: 65px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: $checkout-width;
+        margin: 65px 0;
+
+        .form-inputs {
+            max-width: $checkout-form-width;
+            width: 100%;
+        }
+
+        .order-info {
+            max-width: $checkout-info-width;
+            width: 100%;
+        }
+    }
+
+    .order-info {
+        .order-check > .title {
+            padding: 0 10px;
+        }
+
+        .table {            
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 115px;
+
+            .title, .title > * {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin: 0;
+
+                span {
+                    display: block;
+                    
+                    &:first-child {
+                        width: 70%;
+                    }
+
+                    &:last-child {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 30%;
+                    }
+                }
+            }
+
+            & > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: $checkout-table-gap 10px;
+
+                &.total {
+                    background-color: $form-default-color;
+                }
+
+                .title {
+                    width: 70%;
+                }
+
+                .text-block {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 30%;
+                }
+            }
+        }
+
+        .payment-methods {
+            padding: 0 10px;
+
+            .button {
+                margin-top: 47px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    #checkout {
+        padding: 0 15px;
+
+        #title-bread {
+            padding: 0;
+        }
+    }   
+}
+
+@media (max-width: 770px) {
+    #checkout {
+        margin-bottom: 0;
+
+        form {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            max-width: 365px;
+            margin: 35px 0;
+
+            .form-inputs {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .order-info {
+                max-width: 100%;
+                margin-top: 35px;
+
+                .table {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }   
+}

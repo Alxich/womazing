@@ -1,0 +1,45 @@
+#map {
+    position: relative;
+    background-color: $map-placeholder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $map-height;
+    width: 100%;
+    margin: 65px 0;
+
+    &::before {
+        position: absolute;
+        content: attr(no-cart-title);
+        display: block;
+        top: 50%;
+        left: 50%;
+        font-size: $text;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .container {
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1140px) {
+    #map {
+        width: calc(100% - 25px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 770px) {
+    $map-height: 365px;
+
+    #map {
+        height: $map-height;
+        margin: 35px 0;
+    }
+}

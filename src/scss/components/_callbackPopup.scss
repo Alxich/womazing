@@ -1,0 +1,92 @@
+#callback-popup {
+    position: fixed;
+    background-color: $callback-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all $duration ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999999;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .container {
+        position: relative;
+        background-color: $white;
+        max-width: $callback-width;
+        padding: $callback-gap;
+
+        .title {
+            width: 100%;
+            text-align: center;
+            margin-bottom: $callback-item-gap;
+        }
+
+        .button-outline {
+            max-width: 168px;
+        }
+
+        .close {
+            position: absolute;
+            display: block;
+            height: 15px;
+            width: 15px;
+            top: 32px;
+            right: 15px;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            .content {
+                position: relative;
+                display: block;
+                height: 100%;
+                width: 100%;
+
+                span {
+                    position: absolute;
+                    background-color: $black;
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+
+                    &:first-child {
+                        top: 13px;
+                        left: 4px;
+                        transform: rotate(50deg) translate(-50%, -50%);
+                    }
+
+                    &:last-child {
+                        top: 2px;
+                        right: -4px;
+                        transform: rotate(-50deg) translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #callback-popup {
+        padding: 0 15px;
+
+        .container {
+            padding: 50px 25px;
+
+            form {
+                input:not([type=checkbox]):nth-child(3) {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
