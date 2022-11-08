@@ -1,0 +1,30 @@
+#admin-home {
+    padding: 65px 0 0 0;
+
+    .container {
+        padding: 0;
+
+        .item {
+            border: 3px solid $admin-border;
+            padding: 35px 25px 45px 25px;
+
+            .title {
+                margin-bottom: 25px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .actions {
+                .title p {
+                    cursor: default;
+                }
+                
+                p {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { scrollTo } from "../scrollTo";
+import { scrollTo } from "./scrollTo";
 
 const Button = ({
   onClick,

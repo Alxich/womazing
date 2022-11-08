@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 import { Button } from "../components";
-import { scrollTo } from "../scrollTo";
+import { scrollTo } from "./scrollTo";
 
 function BackToTop({ isOpenSidebar }) {
   const [isVisible, setIsVisible] = React.useState(false);

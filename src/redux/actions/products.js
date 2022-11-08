@@ -1,7 +1,19 @@
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import store from "../store";
 
 export const setLoaded = (payload) => ({
   type: "SET_LOADED",
+  payload: payload,
+});
+
+export const setSuccess = (payload) => ({
+  type: "SET_PRODUCT_SUCCESS",
+  payload: payload,
+});
+
+export const setError = (payload) => ({
+  type: "SET_PRODUCT_ERROR",
   payload: payload,
 });
 
@@ -25,6 +37,100 @@ export const fetchProducts = (category) => (dispatch) => {
     .then(({ data }) => {
       dispatch(setProducts(data));
     });
+};
+
+export const postProduct =
+  ({ Name, Category, imageUrl, ImgageGalery, Price, Text, Sizes, Colors }) =>
+  (dispatch) => {
+    if (dispatch(getValidationStatus())) {
+      // no errors submit the form
+      dispatch({
+        type: "POST_PRODUCT",
+        payload: false,
+      });
+      axios
+        .post("/product/", {
+          id: uuidv4(),
+          imageUrl: imageUrl,
+          imageGalery: ImgageGalery,
+          name: Name,
+          category: Category,
+          price: Price,
+          text: Text,
+          sizes: Sizes,
+          colors: Colors,
+        })
+        .then((response) => {
+          setSuccess("The product was posted successfully  {" + response + "}");
+        })
+        .catch((error) => {
+          setError(error);
+        });
+    } else {
+      setError("Please check your fields to be valid");
+    }
+  };
+
+export const updateProduct =
+  ({
+    Name,
+    Category,
+    imageUrl,
+    ImgageGalery,
+    Price,
+    Text,
+    Sizes,
+    Colors,
+    Id,
+  }) =>
+  (dispatch) => {
+    if (dispatch(getValidationStatus())) {
+      // no errors submit the form
+      dispatch({
+        type: "POST_PRODUCT",
+        payload: false,
+      });
+      axios
+        .put(`/product/${Id}`, {
+          id: Id,
+          imageUrl: imageUrl,
+          imageGalery: ImgageGalery,
+          name: Name,
+          category: Category,
+          price: Price,
+          text: Text,
+          sizes: Sizes,
+          colors: Colors,
+        })
+        .then((response) => {
+          setSuccess("The product was posted successfully {" + response + "}");
+        })
+        .catch((error) => {
+          setError(error);
+        });
+    } else {
+      setError("Please check your fields to be valid");
+    }
+  };
+
+export const removeProduct = (id) => (dispatch) => {
+  dispatch({
+    type: "SET_LOADED",
+    payload: false,
+  });
+  axios.delete(`/products/${id}`).then(() => {
+    dispatch(fetchProducts(null));
+  });
+};
+
+export const getValidationStatus = () => (dispatch) => {
+  dispatch({
+    type: "GET_VALID_STATUS",
+  });
+
+  const { products } = store.getState();
+
+  return products.isValid;
 };
 
 export const setProducts = (items) => ({

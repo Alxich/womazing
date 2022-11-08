@@ -42,7 +42,7 @@ class Checkout extends React.Component {
     this.submitCalled = this.props.submitCalled;
     this.isAllValid = false;
     this.checkboxCheck = false;
-    this.orderSendStatus = localStorage.getItem("orderSendStatus");
+    this.orderSendStatus = sessionStorage.getItem("orderSendStatus");
   }
 
   setCheckboxCheck = (value) => {
@@ -58,7 +58,6 @@ class Checkout extends React.Component {
   };
 
   handleChange = (e) => {
-    console.log(this.state);
     this.setState({
       errors: {
         ...this.state.errors,
@@ -83,8 +82,6 @@ class Checkout extends React.Component {
 
     this.setSubmitCalled(true);
 
-    console.log(checkboxCheck);
-
     if (errorsForm) {
       if (checkboxCheck) {
         this.setState({ errors: errorsForm });
@@ -106,7 +103,7 @@ class Checkout extends React.Component {
         FlatHouseNum: fields.FlatHouseNum,
       };
 
-      localStorage.setItem("orderSendStatus", "true");
+      sessionStorage.setItem("orderSendStatus", "true");
       this.setIsAllValid(dispatch(getValidationStatus()));
       dispatch(sendOrder(data));
     }

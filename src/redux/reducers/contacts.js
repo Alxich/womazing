@@ -1,15 +1,37 @@
 const initialState = {
-  message: {},
+  message: [],
+  messages: [],
   isValid: false,
+  isLoaded: false,
   messageStatus: null,
 };
 
 const contacts = (state = initialState, action) => {
   switch (action.type) {
+    case "FETCH_MESSAGE":
+      return {
+        ...state,
+        message: action.payload,
+        isValid: true,
+        isLoaded: true,
+      };
+    case "FETCH_MESSAGES":
+      return {
+        ...state,
+        messages: action.payload,
+        isValid: true,
+        isLoaded: true,
+      };
     case "SEND_MESSAGE":
       return {
         ...state,
         message: action.payload,
+        isValid: true,
+      };
+    case "REMOVE_MESSAGE":
+      return {
+        ...state,
+        messages: action.payload,
         isValid: true,
       };
     case "SET_MESSAGE_ERROR":

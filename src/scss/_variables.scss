@@ -4,9 +4,11 @@
 */
 
 $black: #000000;
+$black-outcolor: #111111;
 $white: #ffffff;
 $brand-bg: #F1EADC;
 $brand-accent: #998E78;
+$brand-accent-login: #998e780d;
 $no-relative: #9C9C9C;
 $brand: #6E9C9F;
 $brand-hover: #509498;
@@ -15,8 +17,11 @@ $orange: #fe5f1e;
 $outcolor: #F1F5F5;
 $counter: #808080;
 $counter-border: #AFAFAF;
+$admin-border: #AFAFAF;
+$admin-outcolor: #808080;
 $brand-trans:  rgba(110, 156, 159, 0.77);
 $error-color: #ffc5c5;
+$good-color: #07ce60;
 
 $footer: #100F0F;
 
@@ -140,3 +145,7 @@ $cart-thumb-width: 125px;
 
 $sidebar: #191A19;
 $sidebar-width: 400px;
+
+// Admin
+
+$adminSideBar: 325px;

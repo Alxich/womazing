@@ -12,6 +12,24 @@
     margin-bottom: -$header-height;
     overflow: hidden;
 
+    &.admin {
+        background-color: $black;
+        height: 56px;
+        color: $white;
+
+        .title p {
+            font-size: 0.85rem;
+        }
+
+        .text-block {
+            font-size: 0.85rem;
+        }
+
+        .navigation li {
+            font-size: 0.85rem;
+        }
+    }
+
     &.scrolling {
         background-color: $white;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);  
@@ -61,6 +79,30 @@
                     font-weight: 700;
                     color: $brand;
                 }
+            }
+        }
+    }
+
+    .admin-shows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .icon {
+            height: 38px;
+            width: 38px;
+            border: 2px solid $white;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 2px 15px 0 0;
+
+            .title {
+                color: $white;
             }
         }
     }

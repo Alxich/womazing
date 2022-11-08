@@ -115,27 +115,28 @@ class Form extends React.Component {
                 placeholder="Phone"
               />
               <textarea
-                className={classNames({ invalid: errors.Message })}
                 name="Message"
                 value={fields.Message}
+                className={classNames({ invalid: errors.Message })}
                 onChange={(e) => this.handleChange(e)}
                 placeholder="Message"
               />
               <Button className="button" usual send onClick={this.handleSubmit}>
                 Send
               </Button>
-              {this.isAllValid ? (
-                <div className="form-message text-block success centered">
-                  <p>
-                    Message was send and received. We will get in touch with you
-                    soon.
-                  </p>
-                </div>
-              ) : (
-                <div className="form-message text-block error">
-                  <p>{messageState}</p>
-                </div>
-              )}
+              {this.submitCalled &&
+                (this.isAllValid ? (
+                  <div className="form-message text-block success centered">
+                    <p>
+                      Message was send and received. We will get in touch with
+                      you soon.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="form-message text-block error">
+                    <p>{messageState}</p>
+                  </div>
+                ))}
             </form>
           </div>
           <div className="thumbnail">

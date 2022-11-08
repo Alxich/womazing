@@ -52,7 +52,6 @@ const cart = (state = initailState, action) => {
       const newItems = {
         ...state.items,
       };
-      console.log(action.payload);
       const currentTotalPrice = newItems[action.payload].totalPrice;
       const currentTotalCount = newItems[action.payload].items.length;
       delete newItems[action.payload];

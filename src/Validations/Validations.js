@@ -11,6 +11,40 @@ class ValidateFields {
         }
         return false;
 
+      case "Text":
+        if (validator.isEmpty(value)) {
+          return "Please field is required";
+        } else if (!validator.isLength(value, { min: 1 })) {
+          return "Field need to container should be minimum a character";
+        }
+        return false;
+
+      case "Url":
+        if (validator.isEmpty(value)) {
+          return "Please field is required";
+        } else if (
+          !validator.isURL(value, {
+            protocols: ["http", "https"],
+            require_valid_protocol: true,
+          })
+        ) {
+          return "Please check your url to be valid";
+        }
+        return false;
+
+      case "Colors": {
+        if (validator.isEmpty(value)) {
+          return "Please field is required";
+        } else if (
+          !validator.contains(value, {
+            seed: "#",
+          })
+        ) {
+          return "Please check your hex color to be valid";
+        }
+        return false;
+      }
+
       case "Email":
         if (validator.isEmpty(value)) {
           return "Email is required";
@@ -72,6 +106,14 @@ class ValidateFields {
           return "Flat/House number is required";
         } else if (!validator.isLength(value, { min: 1 })) {
           return "Flat/House number should be minimum 1 characters";
+        }
+        return false;
+
+      case "Password":
+        if (validator.isEmpty(value)) {
+          return "Password is required";
+        } else if (!validator.isLength(value, { min: 5 })) {
+          return "Password should be minimum 5 characters";
         }
         return false;
 

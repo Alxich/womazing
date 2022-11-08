@@ -1,0 +1,199 @@
+#admin-sidepanel {
+    position: relative;
+    background-color: $black-outcolor;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75.4vh;
+    width: $adminSideBar;
+    color: $white;
+    padding: 0 0 35px 0;
+
+    & > div, & > ul {
+        width: 100%;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 0;
+        margin-bottom: auto;
+
+        li {
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: 1px solid $admin-border;
+            height: 56px;
+            width: 100%;
+            font-size: $text;
+            padding: 0 15px;
+            transition: all $duration ease;
+            cursor: pointer;
+
+            &:hover, &.active {
+                background-color: rgba($white, $alpha: 0.15);
+            }
+
+            &:first-child {
+                border-top: 1px solid $admin-border;
+            }
+
+            a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 100%;
+                width: 100%;   
+            }
+        }
+    }
+
+    .log-out {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        p {
+            position: relative;
+            display: block;
+            font-size: $small-text;
+            color: $no-relative;
+            cursor: pointer;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background-color: rgba($no-relative, $alpha: 0.5);
+                display: block;
+                border-radius: 3px;
+                height: 2px;
+                width: 0;
+                right: 0;
+                bottom: -5px;
+                left: 0;
+                margin: 0 auto;
+                transition: all $duration ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}  
+
+@import "./login";
+@import "./home";
+@import "./newItem";
+
+.wrapper.admin .container {
+    @import "~bootstrap/scss/bootstrap";
+
+    a {
+        text-decoration: none;
+    }
+
+    #title-bread {
+        margin: 80px 0 80px 0;
+        padding: 0;
+    }
+
+    .table-responsive {
+        width: 100%;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .table > :not(caption) > * > * {
+        padding: 0.85rem 0.5rem;
+    }
+
+    .actions, .category {
+        span {
+            transition: all $duration ease;
+            cursor: pointer;
+    
+            &:hover {
+                color: $brand;
+            }
+        }
+    }
+
+    form {
+        .item.container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 25px 0;
+
+            & > div {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            input, select {
+                height: 42px;
+                max-width: 360px;
+            }
+
+            .input-actions {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                max-width: 420px;
+                width: 100%;
+
+                div {
+                    width: 100%;
+                }
+
+                button {
+                    margin: auto 0 0 15px;
+                }
+            }
+
+            .button-add-more {
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                margin: 15px 0 0 0;
+
+                .title {
+                    margin: 0 15px 0 0;
+                    
+                    & > * {
+                        margin: 0;
+                    }
+                }
+            }
+    
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+                width: 35px;
+            }
+        }
+
+        .title {
+            margin-bottom: 25px;
+        }
+
+        .current {
+            color: $admin-outcolor;
+            margin: 0 0 15px 0;
+        }
+    }
+}

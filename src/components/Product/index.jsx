@@ -24,6 +24,8 @@ function ProductInfo({ currentProduct }) {
       color: currentProduct.colors[currentActiveSize],
     };
 
+    sessionStorage.setItem("orderSendStatus", "false");
+
     dispatch({
       type: "ADD_ITEM_CART",
       payload: obj,

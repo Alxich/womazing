@@ -18,7 +18,7 @@ function Shop({ handleProduct, handleShopCat, categorySelected }) {
     return items.slice(firstPageIndex, lastPageIndex);
   };
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if (categorySelected) {
       dispatch(fetchProducts(categorySelected));
     } else {

@@ -1,0 +1,691 @@
+{
+  "authentication": {
+    "email": "adminlovecat@gmail.com",
+    "password": "adminlovecat"
+  },
+  "serverSession": {
+    "session": ""
+  },
+  "products": [
+    {
+      "id": 0,
+      "imageUrl": "https://picsum.photos/id/22/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/20/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/10/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/9/536/729"
+        }
+      ],
+      "name": "Sweet-Shot sweatshirt",
+      "category": "Sweatshirts",
+      "price": {
+        "old": "229",
+        "new": "129"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://picsum.photos/id/40/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/45/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/36/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/32/536/729"
+        }
+      ],
+      "name": "Coat USA",
+      "category": "Coat",
+      "price": {
+        "old": "329",
+        "new": "185"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://picsum.photos/id/35/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/212/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/19/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/434/536/729"
+        }
+      ],
+      "name": "Cardigan Space",
+      "category": "Cardigans",
+      "price": {
+        "old": "259",
+        "new": "187"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://picsum.photos/id/98/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/2/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/1/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/3/536/729"
+        }
+      ],
+      "name": "Hoodie Speed",
+      "category": "Hoodies",
+      "price": {
+        "old": "350",
+        "new": "234"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://picsum.photos/id/34/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/76/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/67/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/55/536/729"
+        }
+      ],
+      "name": "Sweet-Shot sweatshirt",
+      "category": "Sweatshirts",
+      "price": {
+        "old": "653",
+        "new": "200"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://picsum.photos/id/29/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/30/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/55/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/94/536/729"
+        }
+      ],
+      "name": "Coat USA",
+      "category": "Coat",
+      "price": "242",
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://picsum.photos/id/46/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/33/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/98/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/259/536/729"
+        }
+      ],
+      "name": "Cardigan Space",
+      "category": "Cardigans",
+      "price": {
+        "old": "629",
+        "new": "374"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://picsum.photos/id/52/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/55/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/27/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/31/536/729"
+        }
+      ],
+      "name": "Hoodie Speed",
+      "category": "Hoodies",
+      "price": {
+        "old": "982",
+        "new": "743"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://picsum.photos/id/36/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/37/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/44/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/35/536/729"
+        }
+      ],
+      "name": "Sweet-Shot sweatshirt",
+      "category": "Sweatshirts",
+      "price": {
+        "old": "205",
+        "new": "104"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://picsum.photos/id/91/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/82/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/72/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/62/536/729"
+        }
+      ],
+      "name": "Coat USA",
+      "category": "Coat",
+      "price": "129",
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://picsum.photos/id/39/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/50/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/51/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/65/536/729"
+        }
+      ],
+      "name": "Cardigan Space",
+      "category": "Cardigans",
+      "price": "159",
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://picsum.photos/id/56/536/729",
+      "imageGalery": [
+        {
+          "id": 0,
+          "url": "https://picsum.photos/id/69/536/729"
+        },
+        {
+          "id": 1,
+          "url": "https://picsum.photos/id/82/536/729"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/id/83/536/729"
+        }
+      ],
+      "name": "Hoodie Speed",
+      "category": "Hoodies",
+      "price": {
+        "old": "525",
+        "new": "450"
+      },
+      "text": "Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem.Is a wardrobe essential. Made from a soft cotton, this piece will become a staple which can be worn with almost anything.",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "colors": [
+        {
+          "name": "brown",
+          "pallete": "#927876"
+        },
+        {
+          "name": "grey",
+          "pallete": "#D4D4D4"
+        },
+        {
+          "name": "pink",
+          "pallete": "#FD9696"
+        },
+        {
+          "name": "orange",
+          "pallete": "#FDC796"
+        }
+      ]
+    }
+  ],
+  "contactMessages": [
+    {
+      "id": "78d1f6d7-079a-488c-9483-43b8e0a6ee40",
+      "name": "Volodua",
+      "email": "volyoadasubota@gmail.com",
+      "phone": "0085848483",
+      "message": "Message what is the message ?"
+    },
+    {
+      "id": "3784627a-6a4b-410b-a549-609939942904",
+      "name": "Jame",
+      "email": "jameNotReal@mfsx.com",
+      "phone": "0888584732",
+      "message": "Hello i love New York"
+    },
+    {
+      "id": "99b2ca03-80f3-4951-89be-63e628497f1b",
+      "name": "Vaslon",
+      "email": "vaslonporody@gmail.com",
+      "phone": "380939393123",
+      "message": "Vaslon it not like lasone"
+    },
+    {
+      "id": "dceda855-f8c3-49ca-9837-d569c6ff89ac",
+      "name": "Volodya",
+      "email": "vlodvrot@gmail.com",
+      "phone": "0994883823",
+      "message": "Message from Volodya"
+    },
+    {
+      "id": "b3790d71-bdcd-4a2a-9a32-9024689d214d",
+      "name": "Alex",
+      "email": "belich.olexandr@gmail.com",
+      "phone": "0667348195"
+    },
+    {
+      "id": "de77949a-cfc0-4fef-9124-bcea82b95579",
+      "name": "Alex",
+      "email": "alex.example@gmail.com",
+      "phone": "0667348195"
+    },
+    {
+      "id": "1816e076-963e-41e0-bd26-2a267508bb56",
+      "name": "Alex",
+      "email": "vladuckduck@gmail.com",
+      "phone": "0667348195",
+      "message": "Message message"
+    },
+    {
+      "id": "f778ab21-5942-4575-b06e-30aaec3711e4",
+      "name": "Kastol",
+      "email": "kastollapero@france.net",
+      "phone": "0999300324",
+      "message": "Message la Kastol den France"
+    },
+    {
+      "id": "82626840-12df-4fae-bb48-15e1d2951d59",
+      "name": "Belich Olexandr",
+      "email": "belich.olexandr@gmail.com",
+      "phone": "0667348195",
+      "message": "Good work"
+    }
+  ],
+  "orders": [
+    {
+      "id": "8905ece4-9e65-478e-b8bc-37716a6a0b6f",
+      "name": "Volodya",
+      "email": "vlodvrot@gmail.com",
+      "phone": "0994883823",
+      "message": "Message from Volodya",
+      "country": "Volhosanks",
+      "city": "volbur",
+      "street": "pechkina",
+      "houseFlat": "12 pechkina avenue",
+      "flatHouseNum": "12"
+    },
+    {
+      "id": "c3c90126-d270-4dcb-8bb7-0e794b833c50",
+      "name": "Maska",
+      "email": "maskanotip@noip.com",
+      "phone": "380767663622",
+      "message": "Kukusha",
+      "country": "CountryPi",
+      "city": "Pipi",
+      "street": "pipironu",
+      "houseFlat": "Nokusha",
+      "flatHouseNum": "23"
+    }
+  ]
+}

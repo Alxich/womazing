@@ -1,12 +1,19 @@
 import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import Card from "./Card";
 import { Button } from "../index";
 
-function Collection({ title, button, amount, products, handleProduct }) {
-  const itemsAmount = amount ? products.slice(0, amount + 1) : products;
+function Collection({ title, button, amount, handleProduct }) {
+  const [itemsAmount, setItemsAmout] = React.useState();
+
+  const products = useSelector(({ products }) => products.items);
+
+  React.useEffect(() => {
+    setItemsAmout(amount ? products?.slice(0, amount + 1) : products);
+  }, [products]);
 
   return (
     <div
@@ -30,7 +37,7 @@ function Collection({ title, button, amount, products, handleProduct }) {
       )}
 
       <div className="container to-left collection wrap three-line">
-        {itemsAmount.map((item, id) => {
+        {itemsAmount?.map((item, id) => {
           return (
             <Card
               key={`${item}__${id}`}

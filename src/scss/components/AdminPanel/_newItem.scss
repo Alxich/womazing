@@ -1,0 +1,14 @@
+#add-new-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $good-color;
+    border-radius: 8px;
+    height: 35px;
+    width: 165px;
+    margin: 0 auto 35px 0;
+
+    a {
+        text-decoration: none;
+    }
+}

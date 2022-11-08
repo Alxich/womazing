@@ -1,4 +1,11 @@
 {
+  "authentication": {
+    "email": "adminlovecat@gmail.com",
+    "password": "adminlovecat"
+  },
+  "serverSession": {
+    "session": "4d110dde-08fe-4e99-b9d0-f3e8342dd4eb"
+  },
   "products": [
     {
       "id": 0,
@@ -646,6 +653,20 @@
       "email": "kastollapero@france.net",
       "phone": "0999300324",
       "message": "Message la Kastol den France"
+    },
+    {
+      "id": "b2ba3ea5-41df-4689-879b-24541f431118",
+      "name": "Belich Olexandr",
+      "email": "belich.olexandr124@gmail.com",
+      "phone": "0667348195",
+      "message": "Updated message"
+    },
+    {
+      "id": "93229280-928e-4ec2-acb8-71e235191bbc",
+      "name": "Vlalala",
+      "email": "vladuckduck@gmail.com",
+      "phone": "380680868994",
+      "message": "Picilos"
     }
   ],
   "orders": [
@@ -671,42 +692,6 @@
       "city": "Pipi",
       "street": "pipironu",
       "houseFlat": "Nokusha",
-      "flatHouseNum": "23"
-    },
-    {
-      "id": "36c0283d-3ab3-4709-84c0-2acf71b14c7a",
-      "name": "Holupkin",
-      "email": "zolupkin@gma.com",
-      "phone": "380898988888",
-      "message": "Message forsacha",
-      "country": "Zakupka",
-      "city": "Pupka",
-      "street": "Strubka",
-      "houseFlat": "Kolupla",
-      "flatHouseNum": "Lakocha"
-    },
-    {
-      "id": "5f8aef8f-833a-49ac-b2e4-17edb1ee2ef0",
-      "name": "Vladuk",
-      "email": "vladuckduck@gmail.com",
-      "phone": "380993928832",
-      "message": "Message from Vladuk",
-      "country": "Ukraine",
-      "city": "Ternopil",
-      "street": "Holushkina",
-      "houseFlat": "45",
-      "flatHouseNum": "2"
-    },
-    {
-      "id": "1643c9d4-1869-456f-8675-c2b8e6b257d9",
-      "name": "Feduck",
-      "email": "feduckkrack@gmola.cry.com",
-      "phone": "380990990991",
-      "message": "Message is from a duck that name is Feduck",
-      "country": "Konstanta",
-      "city": "False",
-      "street": "Cruck",
-      "houseFlat": "Duck 39",
       "flatHouseNum": "23"
     }
   ]
