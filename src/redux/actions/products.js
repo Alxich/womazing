@@ -40,22 +40,22 @@ export const fetchProducts = (category) => (dispatch) => {
 };
 
 export const postProduct =
-  ({ Name, Category, imageUrl, ImgageGalery, Price, Text, Sizes, Colors }) =>
+  ({ ImageUrl, ImageGalery, Name, Category, Price, Text, Sizes, Colors }) =>
   (dispatch) => {
-    if (dispatch(getValidationStatus())) {
+    if (getValidationStatus()) {
       // no errors submit the form
       dispatch({
         type: "POST_PRODUCT",
         payload: false,
       });
       axios
-        .post("/product/", {
+        .post("/products/", {
           id: uuidv4(),
-          imageUrl: imageUrl,
-          imageGalery: ImgageGalery,
+          imageUrl: ImageUrl,
+          imageGalery: ImageGalery,
           name: Name,
           category: Category,
-          price: Price,
+          price: Price.new > 0 ? Price : Price.old,
           text: Text,
           sizes: Sizes,
           colors: Colors,
@@ -72,32 +72,22 @@ export const postProduct =
   };
 
 export const updateProduct =
-  ({
-    Name,
-    Category,
-    imageUrl,
-    ImgageGalery,
-    Price,
-    Text,
-    Sizes,
-    Colors,
-    Id,
-  }) =>
+  ({ Id, ImageUrl, ImageGalery, Name, Category, Price, Text, Sizes, Colors }) =>
   (dispatch) => {
-    if (dispatch(getValidationStatus())) {
+    if (getValidationStatus()) {
       // no errors submit the form
       dispatch({
         type: "POST_PRODUCT",
         payload: false,
       });
       axios
-        .put(`/product/${Id}`, {
+        .put(`/products/${Id}`, {
           id: Id,
-          imageUrl: imageUrl,
-          imageGalery: ImgageGalery,
+          imageUrl: ImageUrl,
+          imageGalery: ImageGalery,
           name: Name,
           category: Category,
-          price: Price,
+          price: Price.new > 0 ? Price : Price.old,
           text: Text,
           sizes: Sizes,
           colors: Colors,

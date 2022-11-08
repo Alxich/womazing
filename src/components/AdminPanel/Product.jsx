@@ -81,10 +81,9 @@ function AdminProduct({ currentProduct }) {
           },
           errors: {
             ...state.errors,
-            [e.target.name]: validateFields.runValidate(
-              e.target.name,
-              e.target.value
-            ),
+            Price: {
+              old: validateFields.runValidate("Text", e.target.value),
+            },
           },
         })
       : setState({
@@ -101,83 +100,99 @@ function AdminProduct({ currentProduct }) {
           },
           errors: {
             ...state.errors,
-            [e.target.name]: validateFields.runValidate(
-              e.target.name,
-              e.target.value
-            ),
+            Price: {
+              old: validateFields.runValidate("Text", state.fields.Price.old),
+            },
           },
         });
   };
 
   const handleChangeSizes = (e, i) => {
-    const array = [...state.fields.Sizes];
-    array[i] = e.target.value;
+    const massive = [...state.fields.Sizes];
+    massive[i] = e.target.value;
+    const massiveError = [...state.fields.Sizes];
+
+    massiveError.map((item, i) => {
+      return (massiveError[i] = validateFields.runValidate(
+        "Text",
+        e.target.value
+      ));
+    });
 
     setState({
       fields: {
         ...state.fields,
-        Sizes: [...array],
+        Sizes: [...massive],
       },
       errors: {
         ...state.errors,
-        [e.target.name]: validateFields.runValidate(
-          e.target.name,
-          e.target.value
-        ),
+        Sizes: massiveError[i],
       },
     });
   };
 
   const handleChangeColors = (e, i) => {
-    const array = [...state.fields.Colors];
-    array[i] = {
+    const massive = [...state.fields.Colors];
+    massive[i] = {
       name:
         e.target.name === "name"
           ? e.target.value
-          : array[i].name
-          ? array[i].name
+          : massive[i].name
+          ? massive[i].name
           : "",
       pallete:
         e.target.name === "pallete"
           ? e.target.value
-          : array[i].pallete
-          ? array[i].pallete
+          : massive[i].pallete
+          ? massive[i].pallete
           : "",
     };
+
+    let massiveError = [...state.fields.Colors];
+
+    massiveError.map((item, i) => {
+      return (massiveError[i] = {
+        name: validateFields.runValidate("ColorsName", item.name),
+        pallete: validateFields.runValidate("Color", item.pallete),
+      });
+    });
 
     setState({
       fields: {
         ...state.fields,
-        Colors: [...array],
+        Colors: [...massive],
       },
       errors: {
         ...state.errors,
-        [e.target.name]: validateFields.runValidate(
-          e.target.name,
-          e.target.value
-        ),
+        Colors: [...massiveError],
       },
     });
   };
 
   const handleChangeGallery = (e, i) => {
-    const array = [...state.fields.ImageGalery];
-    array[i] = {
-      id: array[i].id,
+    const massive = [...state.fields.ImageGalery];
+    massive[i] = {
+      id: massive[i].id,
       url: e.target.value,
     };
+
+    const massiveError = [...massive];
+
+    massiveError.map((item, i) => {
+      return (massiveError[i] = validateFields.runValidate(
+        "Url",
+        e.target.value
+      ));
+    });
 
     setState({
       fields: {
         ...state.fields,
-        ImageGalery: [...array],
+        ImageGalery: [...massive],
       },
       errors: {
         ...state.errors,
-        [e.target.name]: validateFields.runValidate(
-          e.target.name,
-          e.target.value
-        ),
+        ImageGalery: [...massiveError],
       },
     });
   };
@@ -185,27 +200,44 @@ function AdminProduct({ currentProduct }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { fields } = state;
-    const errorsForm = validateFields.runValidationMethod(fields);
+    const errorsForm = validateFields.runValidationMethodProduct(fields);
 
     if (errorsForm) {
       setState({ fields: { ...fields }, errors: errorsForm });
       return;
     }
 
-    if (fields.Name && fields.Email && fields.Message && fields.Phone) {
+    if (
+      fields.ImageUrl &&
+      fields.ImageGalery &&
+      fields.Name &&
+      fields.Category &&
+      fields.Price &&
+      fields.Text &&
+      fields.Sizes &&
+      fields.Colors
+    ) {
       const data = currentProduct
         ? {
             Id: currentProduct.id,
+            ImageUrl: fields.ImageUrl,
+            ImageGalery: fields.ImageGalery,
             Name: fields.Name,
-            Email: fields.Email,
-            Message: fields.Message,
-            Phone: fields.Phone,
+            Category: fields.Category,
+            Price: fields.Price,
+            Text: fields.Text,
+            Sizes: fields.Sizes,
+            Colors: fields.Colors,
           }
         : {
+            ImageUrl: fields.ImageUrl,
+            ImageGalery: fields.ImageGalery,
             Name: fields.Name,
-            Email: fields.Email,
-            Message: fields.Message,
-            Phone: fields.Phone,
+            Category: fields.Category,
+            Price: fields.Price,
+            Text: fields.Text,
+            Sizes: fields.Sizes,
+            Colors: fields.Colors,
           };
 
       currentProduct
@@ -214,13 +246,13 @@ function AdminProduct({ currentProduct }) {
     }
   };
 
-  const { fields, errors } = state;
-
   const addFormFieldsSizes = (e) => {
     e.preventDefault();
 
+    console.log(state);
+
     setState({
-      fields: { ...fields, Sizes: [...fields.Sizes, ""] },
+      fields: { ...state.fields, Sizes: [...state.fields.Sizes, ""] },
       errors: { ...state.errors },
     });
   };
@@ -238,8 +270,8 @@ function AdminProduct({ currentProduct }) {
 
     setState({
       fields: {
-        ...fields,
-        Colors: [...fields.Colors, { name: "", pallete: "" }],
+        ...state.fields,
+        Colors: [...state.fields.Colors, { name: "", pallete: "" }],
       },
       errors: { ...state.errors },
     });
@@ -258,8 +290,8 @@ function AdminProduct({ currentProduct }) {
 
     setState({
       fields: {
-        ...fields,
-        ImageGalery: [...fields.ImageGalery, { id: uuidv4(), url: "" }],
+        ...state.fields,
+        ImageGalery: [...state.fields.ImageGalery, { id: uuidv4(), url: "" }],
       },
       errors: { ...state.errors },
     });
@@ -276,8 +308,6 @@ function AdminProduct({ currentProduct }) {
   React.useEffect(() => {
     setState(state);
   }, [state]);
-
-  console.log(state);
 
   return (
     <>
@@ -297,8 +327,8 @@ function AdminProduct({ currentProduct }) {
             <input
               type="text"
               name="Name"
-              value={fields.Name}
-              className={classNames({ invalid: errors.Name })}
+              value={state.fields.Name}
+              className={classNames({ invalid: state.errors.Name })}
               onChange={(e) => handleChange(e)}
               placeholder="Please wire name of product"
             />
@@ -316,19 +346,14 @@ function AdminProduct({ currentProduct }) {
             )}
             <select
               name="Category"
-              className={classNames({ invalid: errors.Category })}
+              className={classNames({ invalid: state.errors.Category })}
               onChange={(e) => handleChange(e)}
+              value={currentProduct && state.fields.Category}
             >
               {categories &&
                 categories.map((item, i) => {
                   return (
-                    <option
-                      value={item}
-                      key={`${item}_${i}`}
-                      selected={
-                        currentProduct && state.fields.Category === item && true
-                      }
-                    >
+                    <option value={item} key={`${item}_${i}`}>
                       {item}
                     </option>
                   );
@@ -359,16 +384,20 @@ function AdminProduct({ currentProduct }) {
             <input
               type="number"
               name="old"
-              value={fields.Price.old}
-              className={classNames({ invalid: errors.Price.old })}
+              value={state.fields.Price.old}
+              className={classNames({
+                invalid: state.errors.Price && state.errors.Price.old,
+              })}
               onChange={(e) => handleChangePrice(e)}
               placeholder="Write here the real price"
             />
             <input
               type="number"
               name="new"
-              value={fields.Price.new}
-              className={classNames({ invalid: errors.Price.new })}
+              value={state.fields.Price.new}
+              className={classNames({
+                invalid: state.errors.Price && state.errors.Price.new,
+              })}
               onChange={(e) => handleChangePrice(e)}
               placeholder="There can be your sale and previous field will be an old price"
             />
@@ -389,8 +418,8 @@ function AdminProduct({ currentProduct }) {
             <textarea
               type="textarea"
               name="Text"
-              value={fields.Text}
-              className={classNames({ invalid: errors.Text })}
+              value={state.fields.Text}
+              className={classNames({ invalid: state.errors.Text })}
               onChange={(e) => handleChange(e)}
               placeholder="Write something about your product"
             />
@@ -410,26 +439,28 @@ function AdminProduct({ currentProduct }) {
                 "
               </p>
             )}
-            {state.fields.Sizes.map((item, i) => {
-              return (
-                <div className="input-actions">
-                  <input
-                    type="text"
-                    Name="Sizes"
-                    className={classNames({ invalid: errors.Sizes[i] })}
-                    onChange={(e) => handleChangeSizes(e, i)}
-                    placeholder="Name size like X, XL, L, M, ..."
-                    value={item}
-                  />
-                  <button
-                    name="remove-more"
-                    onClick={(e) => removeFormFieldsSizes(e, i)}
-                  >
-                    <FontAwesomeIcon icon={faRemove} />
-                  </button>
-                </div>
-              );
-            })}
+            {state.fields.Sizes.length > 0 &&
+              state.fields.Sizes.map((item, i) => {
+                return (
+                  <div className="input-actions" key={`${item}_${i}`}>
+                    <input
+                      type="text"
+                      name="Sizes"
+                      className={classNames({ invalid: state.errors.Sizes[i] })}
+                      onChange={(e) => handleChangeSizes(e, i)}
+                      placeholder="Name size like X, XL, L, M, ..."
+                      value={item}
+                      key={`${item}_${i}`}
+                    />
+                    <button
+                      name="remove-more"
+                      onClick={(e) => removeFormFieldsSizes(e, i)}
+                    >
+                      <FontAwesomeIcon icon={faRemove} />
+                    </button>
+                  </div>
+                );
+              })}
             <div className="button-add-more">
               <div className="title">
                 <h5>Add new size to your table of sizes: </h5>
@@ -458,39 +489,48 @@ function AdminProduct({ currentProduct }) {
                 "
               </p>
             )}
-            {state.fields.Colors.map((item, i) => {
-              return (
-                <>
-                  <div className="input-actions">
-                    <div>
-                      <input
-                        type="text"
-                        Name="name"
-                        className={classNames({ invalid: errors.Sizes[i] })}
-                        onChange={(e) => handleChangeColors(e, i)}
-                        placeholder="Name color like brown, yellow, etc"
-                        value={item.name}
-                      />
-                      <input
-                        type="text"
-                        Name="pallete"
-                        className={classNames({ invalid: errors.Sizes[i] })}
-                        onChange={(e) => handleChangeColors(e, i)}
-                        value={item.pallete}
-                        placeholder="Color in hex format"
-                      />
+            {state.fields.Colors.length > 0 &&
+              state.fields.Colors.map((item, i) => {
+                return (
+                  <>
+                    <div className="input-actions" key={`${item}_${i}`}>
+                      <div>
+                        <input
+                          type="text"
+                          name="name"
+                          className={classNames({
+                            invalid:
+                              state.errors.Colors[i] &&
+                              state.errors.Colors[i].name,
+                          })}
+                          onChange={(e) => handleChangeColors(e, i)}
+                          placeholder="Name color like brown, yellow, etc"
+                          value={item.name}
+                        />
+                        <input
+                          type="text"
+                          name="pallete"
+                          className={classNames({
+                            invalid:
+                              state.errors.Colors[i] &&
+                              state.errors.Colors[i].pallete,
+                          })}
+                          onChange={(e) => handleChangeColors(e, i)}
+                          value={item.pallete}
+                          placeholder="Color in hex format"
+                        />
+                      </div>
+                      <button
+                        name="remove-more"
+                        onClick={(e) => removeFormFieldsColors(e, i)}
+                      >
+                        <FontAwesomeIcon icon={faRemove} />
+                      </button>
                     </div>
-                    <button
-                      name="remove-more"
-                      onClick={(e) => removeFormFieldsColors(e, i)}
-                    >
-                      <FontAwesomeIcon icon={faRemove} />
-                    </button>
-                  </div>
-                  <br />
-                </>
-              );
-            })}
+                    <br />
+                  </>
+                );
+              })}
             <div className="button-add-more">
               <div className="title">
                 <h5>Add new color to your palletes: </h5>
@@ -517,8 +557,8 @@ function AdminProduct({ currentProduct }) {
             <input
               type="text"
               name="ImageUrl"
-              value={fields.ImageUrl}
-              className={classNames({ invalid: errors.Image })}
+              value={state.fields.ImageUrl}
+              className={classNames({ invalid: state.errors.Image })}
               onChange={(e) => handleChange(e)}
               placeholder="Please use url for image"
             />
@@ -545,15 +585,17 @@ function AdminProduct({ currentProduct }) {
                 {`}`}
               </p>
             )}
-            {currentProduct &&
+            {state.fields &&
               state.fields.ImageGalery &&
               state.fields.ImageGalery.map((item, i) => {
                 return (
-                  <div className="input-actions">
+                  <div className="input-actions" key={`${item}_${i}`}>
                     <input
                       type="text"
-                      name="Name"
-                      className={classNames({ invalid: errors.ImageGalery })}
+                      name="ImageUrl"
+                      className={classNames({
+                        invalid: state.errors.ImageGalery[i],
+                      })}
                       onChange={(e) => handleChangeGallery(e, i)}
                       placeholder="Please use url for image"
                       value={item.url}

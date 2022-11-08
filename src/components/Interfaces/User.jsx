@@ -59,7 +59,7 @@ function User() {
     setCategorySelect(cat);
   };
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     dispatch(fetchProduct(currentProductId));
     dispatch(fetchProducts(null));
   }, [currentProductId]);
@@ -157,7 +157,7 @@ function User() {
             <Route
               path="/shop/product/:productName"
               element={
-                currentProductId >= 0 ? (
+                currentProductId ? (
                   <Product
                     currentProduct={currentProduct}
                     handleProduct={handleProductId}

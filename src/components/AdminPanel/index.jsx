@@ -206,7 +206,7 @@ function AdminPanel({ setIsAdmin, dispatch }) {
               exact
               path="/product/:productName"
               element={
-                currentProductId >= 0 ? (
+                currentProductId ? (
                   <AdminProduct currentProduct={currentProduct} />
                 ) : (
                   <PageNotFound />

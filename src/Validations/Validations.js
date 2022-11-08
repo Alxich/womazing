@@ -22,28 +22,27 @@ class ValidateFields {
       case "Url":
         if (validator.isEmpty(value)) {
           return "Please field is required";
-        } else if (
-          !validator.isURL(value, {
-            protocols: ["http", "https"],
-            require_valid_protocol: true,
-          })
-        ) {
-          return "Please check your url to be valid";
+        } else if (!validator.isLength(value, { min: 8 })) {
+          return "Field need to container should be minimum 8 characters";
         }
         return false;
 
       case "Colors": {
         if (validator.isEmpty(value)) {
           return "Please field is required";
-        } else if (
-          !validator.contains(value, {
-            seed: "#",
-          })
-        ) {
+        } else if (!validator.contains(value, ["#"])) {
           return "Please check your hex color to be valid";
         }
         return false;
       }
+
+      case "ColorsName":
+        if (validator.isEmpty(value)) {
+          return "Please field is required";
+        } else if (!validator.isLength(value, { min: 3 })) {
+          return "Field need to container should be minimum 3 characters";
+        }
+        return false;
 
       case "Email":
         if (validator.isEmpty(value)) {
@@ -130,6 +129,47 @@ class ValidateFields {
       const error = this.runValidate(name, fields[name]);
       if (error && error.length > 0) {
         validationErrors[name] = error;
+      }
+    });
+
+    if (Object.keys(validationErrors).length > 0) {
+      return validationErrors;
+    } else {
+      return false;
+    }
+  };
+
+  runValidationMethodProduct = (fields) => {
+    let validationErrors = {};
+
+    Object.keys(fields).forEach((name) => {
+      if (Array.isArray(fields[name])) {
+        fields[name].map((item) => {
+          if (
+            (typeof item === "object" || typeof item === "function") &&
+            item !== null
+          ) {
+            Object.keys(item).forEach((name) => {
+              const error = this.runValidate(name, item);
+
+              if (error && error.length > 0) {
+                validationErrors[name] = error;
+              }
+            });
+          } else {
+            const error = this.runValidate(name, item[name]);
+
+            if (error && error.length > 0) {
+              validationErrors[name] = error;
+            }
+          }
+        });
+      } else {
+        const error = this.runValidate(name, fields[name]);
+
+        if (error && error.length > 0) {
+          validationErrors[name] = error;
+        }
       }
     });
 
