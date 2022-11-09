@@ -35,23 +35,27 @@ function Shop({ handleProduct, handleShopCat, categorySelected }) {
           selectCategory={handleShopCat}
           activeCategory={categorySelected}
         />
-        <div className="counter text-block">
-          <p>Showing on page: {currentProducts().length} products</p>
-        </div>
-        <Collection
-          products={currentProducts()}
-          useNavigation
-          handleProduct={handleProduct}
-        />
-        <div className="counter text-block">
-          <p>Showing on page: {currentProducts().length} products</p>
-        </div>
-        <Pagination
-          currentPage={currentPage}
-          totalCount={items.length}
-          pageSize={PageSize}
-          onPageChange={(page) => setCurrentPage(page)}
-        />
+        {items && (
+          <>
+            <div className="counter text-block">
+              <p>Showing on page: {currentProducts().length} products</p>
+            </div>
+            <Collection
+              products={currentProducts()}
+              useNavigation
+              handleProduct={handleProduct}
+            />
+            <div className="counter text-block">
+              <p>Showing on page: {currentProducts().length} products</p>
+            </div>
+            <Pagination
+              currentPage={currentPage}
+              totalCount={items.length}
+              pageSize={PageSize}
+              onPageChange={(page) => setCurrentPage(page)}
+            />
+          </>
+        )}
       </div>
     </div>
   );

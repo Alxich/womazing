@@ -3,21 +3,29 @@ import React from "react";
 import { TitleBread, Collection, ProductInfo } from "../components/index";
 import { fetchProducts } from "../redux/actions/products";
 import { useSelector, useDispatch } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 function Product({ currentProduct, handleProduct }) {
   const items = useSelector(({ products }) => products.items);
-
   const dispatch = useDispatch();
 
-  React.useLayoutEffect(() => {
-    dispatch(fetchProducts(currentProduct.category));
-  }, [currentProduct.category]);
+  const sessionstorage = sessionStorage.getItem("currentProduct");
+  const currenLocalProduct =
+    sessionstorage !== "undefined" || sessionstorage !== "null"
+      ? JSON.parse(sessionstorage)
+      : currentProduct;
 
-  return (
+  React.useEffect(() => {
+    currenLocalProduct !== "undefined" &&
+      currenLocalProduct !== null &&
+      dispatch(fetchProducts(currenLocalProduct.category));
+  }, []);
+
+  return currenLocalProduct !== "undefined" && currenLocalProduct !== null ? (
     <div id="product">
       <div className="container centered column">
-        <TitleBread title={currentProduct.name} product />
-        <ProductInfo currentProduct={currentProduct} />
+        <TitleBread title={currenLocalProduct.name} product />
+        <ProductInfo currentProduct={currenLocalProduct} />
         <Collection
           title="Related products"
           products={items}
@@ -26,6 +34,8 @@ function Product({ currentProduct, handleProduct }) {
         />
       </div>
     </div>
+  ) : (
+    <Navigate to="/" />
   );
 }
 

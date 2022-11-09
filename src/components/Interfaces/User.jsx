@@ -21,7 +21,7 @@ import {
   Cart,
   PageNotFound,
 } from "../../pages";
-import { fetchProduct, fetchProducts } from "../../redux/actions/products";
+import { fetchProduct } from "../../redux/actions/products";
 
 function User() {
   const [isOpenSidebar, setIsOpenSidebar] = React.useState(false);
@@ -49,6 +49,7 @@ function User() {
   );
 
   const currentProduct = useSelector(({ products }) => products.product);
+
   const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
 
   const handleProductId = (id) => {
@@ -61,8 +62,8 @@ function User() {
 
   React.useEffect(() => {
     dispatch(fetchProduct(currentProductId));
-    dispatch(fetchProducts(null));
-  }, [currentProductId]);
+    sessionStorage.setItem("currentProduct", JSON.stringify(currentProduct));
+  }, [currentProductId, dispatch]);
 
   const onOpenSidebar = () => {
     !isOpenSidebar ? setIsOpenSidebar(true) : setIsOpenSidebar(false);
@@ -157,7 +158,7 @@ function User() {
             <Route
               path="/shop/product/:productName"
               element={
-                currentProductId ? (
+                currentProductId !== null || currentProductId !== undefined ? (
                   <Product
                     currentProduct={currentProduct}
                     handleProduct={handleProductId}

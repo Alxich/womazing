@@ -6,10 +6,8 @@ import { useSelector } from "react-redux";
 import Card from "./Card";
 import { Button } from "../index";
 
-function Collection({ title, button, amount, handleProduct }) {
+function Collection({ title, button, amount, handleProduct, products }) {
   const [itemsAmount, setItemsAmout] = React.useState();
-
-  const products = useSelector(({ products }) => products.items);
 
   React.useEffect(() => {
     setItemsAmout(amount ? products?.slice(0, amount + 1) : products);

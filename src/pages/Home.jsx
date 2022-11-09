@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   Advantages,
@@ -11,6 +11,7 @@ import { fetchProducts } from "../redux/actions/products";
 
 function Home({ handleProduct }) {
   const dispatch = useDispatch();
+  const products = useSelector(({ products }) => products.items);
 
   React.useLayoutEffect(() => {
     dispatch(fetchProducts(null));
@@ -25,6 +26,7 @@ function Home({ handleProduct }) {
           button={true}
           amount={3}
           handleProduct={handleProduct}
+          products={products}
         />
         <Advantages />
         <PromotionSlider />

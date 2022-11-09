@@ -759,6 +759,19 @@
       "email": "kastollapero@france.net",
       "phone": "0999300324",
       "message": "Message la Kastol den France"
+    },
+    {
+      "id": "4670c05f-25cb-434d-bda7-49bc46321aac",
+      "name": "Belich Olexandr",
+      "email": "belich.olexandr@gmail.com",
+      "phone": "0667348195",
+      "message": "ЬОЬЩОТАКЕ"
+    },
+    {
+      "id": "5439d459-7276-4269-93ac-314ba11ea81a",
+      "name": "Belich Olexandr",
+      "email": "belich.olexandr@gmail.com",
+      "phone": "0667348195"
     }
   ],
   "orders": [
@@ -785,6 +798,18 @@
       "street": "pipironu",
       "houseFlat": "Nokusha",
       "flatHouseNum": "23"
+    },
+    {
+      "id": "cd46c92f-e271-41c5-ab5f-412d845a6ced",
+      "name": "Belich Olexandr",
+      "email": "belich.olexandr@gmail.com",
+      "phone": "380667348193",
+      "message": "ЬОЬЩОТАКЕ",
+      "country": "Ukraine",
+      "city": "Chernivtsi",
+      "street": "Holovna 275D",
+      "houseFlat": "275D",
+      "flatHouseNum": "2"
     }
   ]
 }
