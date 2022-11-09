@@ -492,8 +492,8 @@ function AdminProduct({ currentProduct }) {
             {state.fields.Colors.length > 0 &&
               state.fields.Colors.map((item, i) => {
                 return (
-                  <>
-                    <div className="input-actions" key={`${item}_${i}`}>
+                  <React.Fragment key={`${item}_${i}`}>
+                    <div className="input-actions">
                       <div>
                         <input
                           type="text"
@@ -528,7 +528,7 @@ function AdminProduct({ currentProduct }) {
                       </button>
                     </div>
                     <br />
-                  </>
+                  </React.Fragment>
                 );
               })}
             <div className="button-add-more">
@@ -576,10 +576,10 @@ function AdminProduct({ currentProduct }) {
                 <br />
                 {state.fields.ImageGalery.map((item, i) => {
                   return (
-                    <>
+                    <React.Fragment key={`${item}_${i}`}>
                       {`"${item.url}"`}
                       <br />
-                    </>
+                    </React.Fragment>
                   );
                 })}
                 {`}`}

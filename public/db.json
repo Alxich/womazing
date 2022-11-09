@@ -4,7 +4,7 @@
     "password": "adminlovecat"
   },
   "serverSession": {
-    "session": "82332abe-b05a-4055-b7cd-63d6055e559b"
+    "session": "680c1294-6978-4139-963c-877ace901562"
   },
   "products": [
     {
@@ -601,108 +601,6 @@
           "pallete": "#FDC796"
         }
       ]
-    },
-    {
-      "id": "8d16de92-6e9b-4ccb-b91a-2263e6d5583b",
-      "imageUrl": "https://picsum.photos/id/83/536/729",
-      "imageGalery": [
-        {
-          "id": "8ea87f41-ef98-41ad-b0cf-61377b510bd3",
-          "url": "https://picsum.photos/id/83/536/729"
-        },
-        {
-          "id": "62583ef8-e79a-45bd-bb88-3e27cd9e36c7",
-          "url": "https://picsum.photos/id/83/536/729"
-        }
-      ],
-      "name": "Belich Olexandr",
-      "category": "Cardigans",
-      "price": {
-        "old": "1222",
-        "new": ""
-      },
-      "text": "asdasadadad",
-      "sizes": [
-        "22",
-        "222"
-      ],
-      "colors": [
-        {
-          "name": "232323",
-          "pallete": "2323"
-        }
-      ]
-    },
-    {
-      "id": "559fd88b-4d11-4e74-8480-207ee4aed632",
-      "imageUrl": "https://picsum.photos/id/23/443",
-      "imageGalery": [
-        {
-          "id": "d60ce528-e4d2-4e58-8c28-699e80dfe048",
-          "url": "https://picsum.photos/id/23/43"
-        },
-        {
-          "id": "ae7be719-b3cc-45e6-9aff-8c69422819a3",
-          "url": "https://picsum.photos/id/23/42"
-        },
-        {
-          "id": "bae7dd5a-aa65-4fa6-99f2-b9ba1e98f71c",
-          "url": "https://picsum.photos/id/23/40"
-        }
-      ],
-      "name": "Alex",
-      "category": "Sweatshirts",
-      "price": {
-        "old": "123",
-        "new": "-1"
-      },
-      "text": "32323333333333333adminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecatadminlovecat",
-      "sizes": [
-        "S"
-      ],
-      "colors": [
-        {
-          "name": "Color",
-          "pallete": "#000000"
-        }
-      ]
-    },
-    {
-      "id": "4bfb16de-99a4-4e7d-be3b-a24931215e5f",
-      "imageUrl": "https://picsum.photos/id/83/436/729",
-      "imageGalery": [
-        {
-          "id": "422dafc0-befb-4cce-9692-58daabeb8528",
-          "url": "https://picsum.photos/id/83/436/729"
-        },
-        {
-          "id": "baf32222-8138-4504-8c31-48e62d399c05",
-          "url": "https://picsum.photos/id/83/436/729"
-        },
-        {
-          "id": "af10f85c-c1ab-496d-af8e-7ee432cd6768",
-          "url": "https://picsum.photos/id/83/436/729"
-        }
-      ],
-      "name": "Maska",
-      "category": "Hoodies",
-      "price": "1223",
-      "text": " Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0  Price.new > 0 ",
-      "sizes": [
-        "S",
-        "S",
-        "S"
-      ],
-      "colors": [
-        {
-          "name": "S",
-          "pallete": "#000000"
-        },
-        {
-          "name": "E",
-          "pallete": "#004440"
-        }
-      ]
     }
   ],
   "contactMessages": [
@@ -759,19 +657,6 @@
       "email": "kastollapero@france.net",
       "phone": "0999300324",
       "message": "Message la Kastol den France"
-    },
-    {
-      "id": "4670c05f-25cb-434d-bda7-49bc46321aac",
-      "name": "Belich Olexandr",
-      "email": "belich.olexandr@gmail.com",
-      "phone": "0667348195",
-      "message": "ЬОЬЩОТАКЕ"
-    },
-    {
-      "id": "5439d459-7276-4269-93ac-314ba11ea81a",
-      "name": "Belich Olexandr",
-      "email": "belich.olexandr@gmail.com",
-      "phone": "0667348195"
     }
   ],
   "orders": [
@@ -798,18 +683,6 @@
       "street": "pipironu",
       "houseFlat": "Nokusha",
       "flatHouseNum": "23"
-    },
-    {
-      "id": "cd46c92f-e271-41c5-ab5f-412d845a6ced",
-      "name": "Belich Olexandr",
-      "email": "belich.olexandr@gmail.com",
-      "phone": "380667348193",
-      "message": "ЬОЬЩОТАКЕ",
-      "country": "Ukraine",
-      "city": "Chernivtsi",
-      "street": "Holovna 275D",
-      "houseFlat": "275D",
-      "flatHouseNum": "2"
     }
   ]
 }
