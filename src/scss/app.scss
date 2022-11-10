@@ -51,6 +51,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .wrapper.login {
+        min-height: auto;
+    }   
+}
+
 @media (max-width: 600px) {
     .wrapper {
         padding: 110px 0 65px 0;

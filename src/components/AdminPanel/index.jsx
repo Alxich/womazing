@@ -1,6 +1,7 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
+import classNames from "classnames";
 
 import TableBlock from "./Table";
 import AdminProduct from "./Product";
@@ -25,7 +26,6 @@ import AdminHome from "./AdminHome";
 function AdminPanel({ setIsAdmin, dispatch }) {
   const location = useLocation();
   const { pathname } = location;
-  const locationPath = pathname;
 
   /*
    *  0 - product
@@ -34,6 +34,7 @@ function AdminPanel({ setIsAdmin, dispatch }) {
    */
 
   const [categoryAdmin, setCategoryAdmin] = React.useState(0);
+  const [sidepanelActive, setSidepanelActive] = React.useState(false);
 
   const [currentProductId, setCurrentProductId] = React.useState(
     location.state ? location.state.productId : 0
@@ -43,7 +44,7 @@ function AdminPanel({ setIsAdmin, dispatch }) {
     location.state ? location.state.messageId : 0
   );
 
-  const [categorySelected, setCategorySelect] = React.useState(
+  const [categorySelected] = React.useState(
     location.state ? location.state.category : null
   );
 
@@ -52,11 +53,11 @@ function AdminPanel({ setIsAdmin, dispatch }) {
 
   React.useLayoutEffect(() => {
     dispatch(fetchProduct(currentProductId));
-  }, [currentProductId]);
+  }, [currentProductId, dispatch]);
 
   React.useLayoutEffect(() => {
     currentMessageId !== 0 && dispatch(fetchMessage(currentMessageId));
-  }, [currentMessageId]);
+  }, [currentMessageId, dispatch]);
 
   React.useEffect(() => {
     switch (pathname) {
@@ -93,7 +94,7 @@ function AdminPanel({ setIsAdmin, dispatch }) {
         dispatch(fetchProducts(null));
         break;
     }
-  }, [categoryAdmin]);
+  }, [categoryAdmin, categorySelected, dispatch, pathname]);
 
   const categories = ["Home", "Products", "Messages", "Orders"];
 
@@ -116,7 +117,10 @@ function AdminPanel({ setIsAdmin, dispatch }) {
           <Link to="/" className="logo">
             <img src={logo} alt="womazing-logo" />
           </Link>
-          <div className="admin-shows">
+          <div
+            className="admin-shows"
+            onClick={() => setSidepanelActive(!sidepanelActive ? true : false)}
+          >
             <div className="info">
               <div className="title">
                 <p>Admin</p>
@@ -132,7 +136,12 @@ function AdminPanel({ setIsAdmin, dispatch }) {
         </div>
       </header>
       <main className="wrapper admin">
-        <div id="admin-sidepanel">
+        <div
+          id="admin-sidepanel"
+          className={classNames({
+            active: sidepanelActive,
+          })}
+        >
           <ul className="navigation">
             {categories.map((item, i) => {
               return (

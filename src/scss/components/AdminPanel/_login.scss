@@ -43,3 +43,21 @@
         }
     }
 }
+
+@media (max-width: 660px) { 
+    #login {
+        .container {
+            flex-direction: column;
+            max-width: 85%;
+
+            & > div {
+                width: 100%;
+            }
+
+            .image {
+                max-height: 320px;
+                overflow: hidden;
+            }
+        }
+    }
+}

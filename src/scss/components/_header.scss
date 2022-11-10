@@ -281,3 +281,15 @@
         }
     }
 }
+
+@media (max-width: 390px) {
+    .masthead {
+        &.admin {
+            .admin-shows {
+                .info {
+                    display: none;
+                }
+            }
+        }
+    }
+}
